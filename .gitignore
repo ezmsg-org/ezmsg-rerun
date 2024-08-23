@@ -1,0 +1,85 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+# Usually used for freezing scripts into executables
+# If you are not using it, you can remove this section
+*.manifest
+*.spec
+pyinstaller/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Pytest
+.cache
+.pytest_cache/
+
+# pyenv
+.python-version
+
+# virtualenv
+venv/
+*.venv
+ENV/
+env/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+
+# VS Code
+.vscode/
+
+# Flask
+instance/
+.webassets-cache
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+/media
+
+# Celery beat schedule file
+celerybeat-schedule
+
+# dotenv
+.env
+
+# JupyterLab
+.jupyterlab
