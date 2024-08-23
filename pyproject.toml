@@ -2,9 +2,11 @@
 name = "ezmsg-rerun"
 version = "0.1.0"
 description = "ezmsg extension for rerun visualization."
+authors = [{ name = "Preston Peranich", email = "pperanich@gmail.com" }]
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = ["rerun-sdk>=0.18.0", "ezmsg>=3.4.0"]
+license = { file = "LICENSE.txt" }
 
 [build-system]
 requires = ["hatchling"]
@@ -14,6 +16,4 @@ build-backend = "hatchling.build"
 packages = ["src/ezmsg"]
 
 [tool.uv]
-dev-dependencies = [
-    "ezmsg-sigproc>=1.2.3",
-]
+dev-dependencies = ["ezmsg-sigproc>=1.2.3"]
