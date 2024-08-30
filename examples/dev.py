@@ -7,6 +7,15 @@ class Test(ez.Collection):
     VIZ = Rerun()
     SOURCE = EEGSynth()
 
+    def configure(self) -> None:
+        self.VIZ.apply_settings(
+            RerunSettings(
+                name="EEG Synth",
+                channelize=False,
+                base_entity_path="eeg",
+            )
+        )
+
     def network(self):
         return ((self.SOURCE.OUTPUT_SIGNAL, self.VIZ.INPUT_SIGNAL),)
 
@@ -18,10 +27,4 @@ class Test(ez.Collection):
 
 
 if __name__ == "__main__":
-    settings = RerunSettings(
-        name="EEG Synth",
-        channelize=False,
-        base_entity_path="eeg",
-    )
-    collection = Test(settings=settings)
-    ez.run(EEG=collection)
+    ez.run(TEST=Test())

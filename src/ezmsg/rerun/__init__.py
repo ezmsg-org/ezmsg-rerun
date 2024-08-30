@@ -38,7 +38,7 @@ class Rerun(ez.Unit):
                 self.STATE.num_channels is None
                 or self.STATE.num_channels != data.shape[-1]
             ):
-                if self.SETTINGS.channelize:
+                if self.SETTINGS.channelize is True:
                     blueprint = rrb.Grid(
                         contents=[
                             rrb.TimeSeriesView(
@@ -60,7 +60,7 @@ class Rerun(ez.Unit):
                     )
                 else:
                     blueprint = rrb.TimeSeriesView(
-                        origin=f"{self.SETTINGS.base_entity_path}/**",
+                        origin=f"{self.SETTINGS.base_entity_path}/",
                         time_ranges=[
                             rrb.VisibleTimeRange(
                                 "s",
