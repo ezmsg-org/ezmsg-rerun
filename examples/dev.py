@@ -1,9 +1,6 @@
 import ezmsg.core as ez
-import rerun as rr
-import numpy as np
 from ezmsg.sigproc.synth import EEGSynth
-from ezmsg.rerun import Rerun
-from ezmsg.util.debuglog import DebugLog
+from ezmsg.rerun import Rerun, RerunSettings
 
 
 class Test(ez.Collection):
@@ -21,12 +18,10 @@ class Test(ez.Collection):
 
 
 if __name__ == "__main__":
-    ez.run(TEST=Test())
-    # rr.init("rerun_example_send_columns", spawn=True)
-    #
-    # times = np.arange(0, 64)
-    # rr.send_columns(
-    #     "scalars",
-    #     times=[rr.TimeSequenceColumn("step", np.arange(0, 64))],
-    #     components=[rr.components.ScalarBatch(np.sin(times / 10.0))],
-    # )
+    settings = RerunSettings(
+        name="EEG Synth",
+        channelize=False,
+        base_entity_path="eeg",
+    )
+    collection = Test(settings=settings)
+    ez.run(EEG=collection)
