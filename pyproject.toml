@@ -8,6 +8,11 @@ requires-python = ">=3.9"
 dependencies = ["rerun-sdk>=0.18.0", "ezmsg>=3.4.0"]
 license = { file = "LICENSE.txt" }
 
+[project.optional-dependencies]
+test = [
+    "pytest>=8.3.2",
+]
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
