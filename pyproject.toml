@@ -12,7 +12,9 @@ license = { file = "LICENSE.txt" }
 test = [
     "pytest>=8.3.2",
 ]
-dev = ["ezmsg-sigproc>=1.2.3"]
+dev = [
+    "ezmsg-sigproc>=1.5.0",
+]
 
 [build-system]
 requires = ["hatchling", "hatch-vcs"]
