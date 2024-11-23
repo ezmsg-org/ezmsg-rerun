@@ -5,20 +5,24 @@ description = "ezmsg extension for rerun visualization."
 authors = [{ name = "Preston Peranich", email = "pperanich@gmail.com" }]
 readme = "README.md"
 requires-python = ">=3.9"
-dependencies = ["rerun-sdk>=0.18.0", "ezmsg>=3.4.0"]
+dependencies = ["rerun-sdk>=0.18.0", "ezmsg>=3.6.0"]
 license = { file = "LICENSE.txt" }
 
 [project.optional-dependencies]
 test = [
     "pytest>=8.3.2",
 ]
+dev = ["ezmsg-sigproc>=1.2.3"]
 
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/ezmsg/rerun/__version__.py"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/ezmsg"]
-
-[tool.uv]
-dev-dependencies = ["ezmsg-sigproc>=1.2.3"]

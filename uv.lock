@@ -30,14 +30,14 @@ wheels = [
 
 [[package]]
 name = "ezmsg"
-version = "3.4.0"
+version = "3.6.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/65/a3/01e58c9c48e5e5d88562becd7807eab1d8d143b9957fc85ea9722949fed9/ezmsg-3.4.0.tar.gz", hash = "sha256:3b18402615c88f978cde92c8c4c14f2b60e2cffcdb6834b795520785bf483cc5", size = 47751 }
+sdist = { url = "https://files.pythonhosted.org/packages/11/fa/b4dffddc08f608f5d69de7692a5c56a6f82c4f8cd0555628fe3627344d6e/ezmsg-3.6.0.tar.gz", hash = "sha256:978d8c8934fbda9feb236e1409d47d99c0631cd3e886469ceab6180f0fe3630a", size = 141506 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/fb/79/a6aa842ce0cbaeacaeef3dfff9c147328627367bac91ee12633bc9b15bf8/ezmsg-3.4.0-py3-none-any.whl", hash = "sha256:656cf7fb9d51db843bf713c7c5a35a1af5e0b66af799f2557e09e5377d82ead0", size = 61562 },
+    { url = "https://files.pythonhosted.org/packages/a9/22/02a78c0dd48a44ba4a57394d0917e1fe1223f5f1c81b93c5d3c9d9c9f6bf/ezmsg-3.6.0-py3-none-any.whl", hash = "sha256:adda57e28018474fdd601874d04a1a3e598422190f8ce31449b8c75525f1236d", size = 69895 },
 ]
 
 [[package]]
@@ -50,24 +50,20 @@ dependencies = [
 ]
 
 [package.optional-dependencies]
+dev = [
+    { name = "ezmsg-sigproc" },
+]
 test = [
     { name = "pytest" },
 ]
 
-[package.dev-dependencies]
-dev = [
-    { name = "ezmsg-sigproc" },
-]
-
 [package.metadata]
 requires-dist = [
-    { name = "ezmsg", specifier = ">=3.4.0" },
+    { name = "ezmsg", specifier = ">=3.6.0" },
+    { name = "ezmsg-sigproc", marker = "extra == 'dev'", specifier = ">=1.2.3" },
     { name = "pytest", marker = "extra == 'test'", specifier = ">=8.3.2" },
     { name = "rerun-sdk", specifier = ">=0.18.0" },
 ]
-
-[package.metadata.requires-dev]
-dev = [{ name = "ezmsg-sigproc", specifier = ">=1.2.3" }]
 
 [[package]]
 name = "ezmsg-sigproc"

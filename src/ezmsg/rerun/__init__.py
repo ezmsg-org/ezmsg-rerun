@@ -1,8 +1,12 @@
-from typing import Optional
+import typing
+
 import ezmsg.core as ez
 import rerun as rr
 import rerun.blueprint as rrb
 from ezmsg.util.messages.axisarray import AxisArray
+
+
+from .__version__ import __version__ as __version__
 
 
 class RerunSettings(ez.Settings):
@@ -15,7 +19,7 @@ class RerunSettings(ez.Settings):
 
 
 class RerunState(ez.State):
-    num_channels: Optional[int] = None
+    num_channels: typing.Optional[int] = None
 
 
 class Rerun(ez.Unit):
