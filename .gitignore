@@ -83,3 +83,5 @@ celerybeat-schedule
 
 # JupyterLab
 .jupyterlab
+
+src/ezmsg/rerun/__version__.py
