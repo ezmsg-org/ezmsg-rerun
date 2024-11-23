@@ -14,7 +14,7 @@ class RerunSettings(ez.Settings):
     spawn: bool = True
     channelize: bool = True
     base_entity_path: str = "axisarray"
-    time_dim: str | int = "time"
+    time_dim: typing.Union[str, int] = "time"
     window_size: int = 5
 
 
