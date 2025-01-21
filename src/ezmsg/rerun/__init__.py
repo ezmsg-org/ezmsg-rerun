@@ -23,8 +23,8 @@ class RerunState(ez.State):
 
 
 class Rerun(ez.Unit):
-    SETTINGS: RerunSettings
-    STATE: RerunState
+    SETTINGS = RerunSettings
+    STATE = RerunState
 
     INPUT_SIGNAL = ez.InputStream(AxisArray)
 
