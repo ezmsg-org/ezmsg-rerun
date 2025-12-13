@@ -85,3 +85,4 @@ celerybeat-schedule
 .jupyterlab
 
 src/ezmsg/rerun/__version__.py
+uv.lock

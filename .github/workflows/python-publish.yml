@@ -1,8 +1,10 @@
+# This workflow will upload a Python Package using Twine when a release is created
+
 name: Upload Python Package
 
 on:
-  release:
-    types: [published]
+#  release:
+#    types: [published]
   workflow_dispatch:
 
 permissions:
@@ -12,14 +14,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    environment:
-      name: release
-
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install uv
-        uses: astral-sh/setup-uv@v3
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@v6
 
       - name: Build Package
         run: uv build
@@ -27,5 +26,5 @@ jobs:
       - name: Publish Package
         env:
           TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
         run: uvx twine upload dist/*
