@@ -1,9 +1,10 @@
 import typing
 
 import ezmsg.core as ez
+from ezmsg.util.messages.axisarray import AxisArray
+
 import rerun as rr
 import rerun.blueprint as rrb
-from ezmsg.util.messages.axisarray import AxisArray
 
 
 class RerunSettings(ez.Settings):
