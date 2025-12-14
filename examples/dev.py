@@ -1,6 +1,7 @@
 import ezmsg.core as ez
-from ezmsg.rerun import Rerun, RerunSettings
 from ezmsg.sigproc.synth import EEGSynth
+
+from ezmsg.rerun import Rerun, RerunSettings
 
 
 class Test(ez.Collection):
