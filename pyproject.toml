@@ -5,7 +5,10 @@ description = "ezmsg extension for rerun visualization."
 authors = [{ name = "Preston Peranich", email = "pperanich@gmail.com" }]
 readme = "README.md"
 requires-python = ">=3.10.15"
-dependencies = ["rerun-sdk>=0.18.0", "ezmsg>=3.6.0"]
+dependencies = [
+    "rerun-sdk>=0.18.0",
+    "ezmsg>=3.10.0b4",
+]
 license = { file = "LICENSE.txt" }
 
 [dependency-groups]
